@@ -1,6 +1,7 @@
 package com.java8;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.BinaryOperator;
@@ -15,6 +16,12 @@ public class StreamsPractice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		List<String> list = Arrays.asList("Geeks", "GFG", "GeeksforGeeks", "gfg");
+
+		// Using Stream flatMap(Function mapper)
+		list.stream().map(String::toUpperCase).forEach(System.out::println);
+		list.stream().flatMap(str -> Stream.of(str.charAt(2))).forEach(System.out::println);
+
 		ArrayList<Integer> ts = new ArrayList<Integer>();
 
 		ts.add(100);
@@ -25,7 +32,6 @@ public class StreamsPractice {
 		ts.add(106);
 		ts.add(73);
 
-		
 //		ts.stream().distinct().forEach(System.out::println);
 //		System.out.println(
 //				"sum =" + ts.stream().reduce(Integer::sum).get()

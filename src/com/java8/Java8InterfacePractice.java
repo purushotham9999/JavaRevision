@@ -26,6 +26,8 @@ class AbcImp implements Abc {
 public class Java8InterfacePractice {
 
 	public static void main(String[] args) {
+		
+		Abc.peek();
 
 		Abc obj = new AbcImp();
 //		System.out.println();
@@ -33,9 +35,10 @@ public class Java8InterfacePractice {
 		obj.see();
 		Abc.peek();
 		Abc ab = () -> System.out.println("@FunctionalInterface implementation");
-		ab.show();
-		Abc abmr = new AbcImp()::show;
-		abmr.show();
+//		ab.show();
+//		Abc abmr = new AbcImp()::show;
+//		abmr.show();
+		
 	}
 
 }

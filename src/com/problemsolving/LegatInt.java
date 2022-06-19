@@ -3,7 +3,7 @@ package com.problemsolving;
 import java.util.Arrays;
 
 //Legato Interview
-public class LegInt {
+public class LegatInt {
 
 	public static void main(String[] args) {
 
